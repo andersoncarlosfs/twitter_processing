@@ -1,0 +1,20 @@
+---
+version: '3'
+networks:
+  hdfs:
+    driver: bridge
+volumes:
+  hdfs:
+services:
+  hdfs:
+    networks:
+      - batch
+    volumes:
+      - batch:/tmp/hdfs
+    restart: on-failure
+    ports:
+      - 9000:9000
+      - 9864:9864
+      - 9870:9870
+    build:
+      context: ./
