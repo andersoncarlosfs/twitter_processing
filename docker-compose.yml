@@ -65,6 +65,14 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: root
+  producer:
+    networks:
+      - twitter    
+    depends_on:
+      - kafka
+    restart: on-failure
+    build:
+      context: ./sources/producer
   jupyter:
     networks:
       - twitter

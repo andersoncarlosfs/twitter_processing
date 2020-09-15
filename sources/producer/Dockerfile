@@ -6,6 +6,6 @@ COPY ./requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./source ./source
+COPY ./sources ./sources
 
-CMD [ "python", "./source/producer.py"]
+CMD ["python", "./sources/producer.py"]
