@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="org.apache.spark"
+		module="spark-submit-parent-2974c963-ef02-45bc-bd65-afeb2954b8f4"
+		revision="1.0"
+		conf="default"
+		confs="default"
+		date="20200917170124"/>
+	<dependencies>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.30" status="release" pubdate="20191216210337" resolver="central" artresolver="central" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="6">
+				<metadata-artifact status="no" details="" size="5622" time="0" location="/home/jovyan/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.30.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.30.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.pom"/>
+				<caller organisation="org.apache.kafka" name="kafka-clients" conf="compile, runtime" rev="1.7.30" rev-constraint-default="1.7.30" rev-constraint-dynamic="1.7.28" callerrev="2.4.1"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41472" time="0" location="/home/jovyan/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.30.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.xerial.snappy" name="snappy-java">
+			<revision name="1.1.7.5" status="release" pubdate="20200506172808" resolver="central" artresolver="central" homepage="https://github.com/xerial/snappy-java" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="5">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3952" time="0" location="/home/jovyan/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.1.7.5.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.1.7.5.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.5/snappy-java-1.1.7.5.pom"/>
+				<caller organisation="org.apache.kafka" name="kafka-clients" conf="compile, runtime" rev="1.1.7.5" rev-constraint-default="1.1.7.5" rev-constraint-dynamic="1.1.7.3" callerrev="2.4.1"/>
+				<artifacts>
+					<artifact name="snappy-java" type="bundle" ext="jar" status="no" details="" size="1934320" time="0" location="/home/jovyan/.ivy2/cache/org.xerial.snappy/snappy-java/bundles/snappy-java-1.1.7.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.5/snappy-java-1.1.7.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.lz4" name="lz4-java">
+			<revision name="1.7.1" status="release" pubdate="20200118041755" resolver="central" artresolver="central" homepage="https://github.com/lz4/lz4-java" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="4">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2789" time="0" location="/home/jovyan/.ivy2/cache/org.lz4/lz4-java/ivy-1.7.1.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/org.lz4/lz4-java/ivy-1.7.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.pom"/>
+				<caller organisation="org.apache.kafka" name="kafka-clients" conf="compile, runtime" rev="1.7.1" rev-constraint-default="1.7.1" rev-constraint-dynamic="1.6.0" callerrev="2.4.1"/>
+				<artifacts>
+					<artifact name="lz4-java" type="jar" ext="jar" status="no" details="" size="649950" time="0" location="/home/jovyan/.ivy2/cache/org.lz4/lz4-java/jars/lz4-java-1.7.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.luben" name="zstd-jni">
+			<revision name="1.4.4-3" status="release" pubdate="20191121035836" resolver="central" artresolver="central" homepage="https://github.com/luben/zstd-jni" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="3">
+				<license name="BSD 2-Clause License" url="https://opensource.org/licenses/BSD-2-Clause"/>
+				<metadata-artifact status="no" details="" size="2921" time="0" location="/home/jovyan/.ivy2/cache/com.github.luben/zstd-jni/ivy-1.4.4-3.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/com.github.luben/zstd-jni/ivy-1.4.4-3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.4-3/zstd-jni-1.4.4-3.pom"/>
+				<caller organisation="org.apache.kafka" name="kafka-clients" conf="compile, runtime" rev="1.4.4-3" rev-constraint-default="1.4.4-3" rev-constraint-dynamic="1.4.3-1" callerrev="2.4.1"/>
+				<artifacts>
+					<artifact name="zstd-jni" type="jar" ext="jar" status="no" details="" size="4210625" time="0" location="/home/jovyan/.ivy2/cache/com.github.luben/zstd-jni/jars/zstd-jni-1.4.4-3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.4-3/zstd-jni-1.4.4-3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.spark" name="spark-sql-kafka-0-10_2.12">
+			<revision name="3.0.1" status="release" pubdate="20200828113535" resolver="central" artresolver="central" homepage="http://spark.apache.org/" downloaded="false" searched="false" default="false" conf="default, default(runtime), compile, runtime, master" position="0">
+				<metadata-artifact status="no" details="" size="113528" time="0" location="/home/jovyan/.ivy2/cache/org.apache.spark/spark-sql-kafka-0-10_2.12/ivy-3.0.1.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/org.apache.spark/spark-sql-kafka-0-10_2.12/ivy-3.0.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.0.1/spark-sql-kafka-0-10_2.12-3.0.1.pom"/>
+				<caller organisation="org.apache.spark" name="spark-submit-parent-2974c963-ef02-45bc-bd65-afeb2954b8f4" conf="default" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="spark-sql-kafka-0-10_2.12" type="jar" ext="jar" status="no" details="" size="348857" time="0" location="/home/jovyan/.ivy2/cache/org.apache.spark/spark-sql-kafka-0-10_2.12/jars/spark-sql-kafka-0-10_2.12-3.0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.0.1/spark-sql-kafka-0-10_2.12-3.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-pool2">
+			<revision name="2.6.2" status="release" pubdate="20190406012344" resolver="central" artresolver="central" homepage="http://commons.apache.org/proper/commons-pool/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="8">
+				<metadata-artifact status="no" details="" size="14535" time="0" location="/home/jovyan/.ivy2/cache/org.apache.commons/commons-pool2/ivy-2.6.2.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/org.apache.commons/commons-pool2/ivy-2.6.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.6.2/commons-pool2-2.6.2.pom"/>
+				<caller organisation="org.apache.spark" name="spark-sql-kafka-0-10_2.12" conf="default, compile, runtime, master" rev="2.6.2" rev-constraint-default="2.6.2" rev-constraint-dynamic="2.6.2" callerrev="3.0.1"/>
+				<artifacts>
+					<artifact name="commons-pool2" type="jar" ext="jar" status="no" details="" size="129174" time="0" location="/home/jovyan/.ivy2/cache/org.apache.commons/commons-pool2/jars/commons-pool2-2.6.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.6.2/commons-pool2-2.6.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.spark" name="spark-token-provider-kafka-0-10_2.12">
+			<revision name="3.0.1" status="release" pubdate="20200828113259" resolver="central" artresolver="central" homepage="http://spark.apache.org/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="1">
+				<metadata-artifact status="no" details="" size="111126" time="0" location="/home/jovyan/.ivy2/cache/org.apache.spark/spark-token-provider-kafka-0-10_2.12/ivy-3.0.1.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/org.apache.spark/spark-token-provider-kafka-0-10_2.12/ivy-3.0.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.0.1/spark-token-provider-kafka-0-10_2.12-3.0.1.pom"/>
+				<caller organisation="org.apache.spark" name="spark-sql-kafka-0-10_2.12" conf="default, compile, runtime, master" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="3.0.1"/>
+				<artifacts>
+					<artifact name="spark-token-provider-kafka-0-10_2.12" type="jar" ext="jar" status="no" details="" size="56317" time="0" location="/home/jovyan/.ivy2/cache/org.apache.spark/spark-token-provider-kafka-0-10_2.12/jars/spark-token-provider-kafka-0-10_2.12-3.0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.0.1/spark-token-provider-kafka-0-10_2.12-3.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.spark-project.spark" name="unused">
+			<revision name="1.0.0" status="release" pubdate="20141022070005" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="7">
+				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3059" time="0" location="/home/jovyan/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.pom"/>
+				<caller organisation="org.apache.spark" name="spark-sql-kafka-0-10_2.12" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="3.0.1"/>
+				<caller organisation="org.apache.spark" name="spark-token-provider-kafka-0-10_2.12" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="3.0.1"/>
+				<artifacts>
+					<artifact name="unused" type="jar" ext="jar" status="no" details="" size="2777" time="0" location="/home/jovyan/.ivy2/cache/org.spark-project.spark/unused/jars/unused-1.0.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.kafka" name="kafka-clients">
+			<revision name="2.4.1" status="release" pubdate="20200303012323" resolver="central" artresolver="central" homepage="https://kafka.apache.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="2">
+				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4011" time="0" location="/home/jovyan/.ivy2/cache/org.apache.kafka/kafka-clients/ivy-2.4.1.xml" searched="false" original-local-location="/home/jovyan/.ivy2/cache/org.apache.kafka/kafka-clients/ivy-2.4.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.1/kafka-clients-2.4.1.pom"/>
+				<caller organisation="org.apache.spark" name="spark-sql-kafka-0-10_2.12" conf="default, compile, runtime, master" rev="2.4.1" rev-constraint-default="2.4.1" rev-constraint-dynamic="2.4.1" callerrev="3.0.1"/>
+				<caller organisation="org.apache.spark" name="spark-token-provider-kafka-0-10_2.12" conf="compile, runtime" rev="2.4.1" rev-constraint-default="2.4.1" rev-constraint-dynamic="2.4.1" callerrev="3.0.1"/>
+				<artifacts>
+					<artifact name="kafka-clients" type="jar" ext="jar" status="no" details="" size="3269712" time="0" location="/home/jovyan/.ivy2/cache/org.apache.kafka/kafka-clients/jars/kafka-clients-2.4.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.1/kafka-clients-2.4.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation=" org.apache.spark" name="spark-avro_2.12">
+			<revision name="3.0.1" error="not found" downloaded="false" searched="false" conf="default(runtime)" position="-1">
+				<caller organisation="org.apache.spark" name="spark-submit-parent-2974c963-ef02-45bc-bd65-afeb2954b8f4" conf="default" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="1.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

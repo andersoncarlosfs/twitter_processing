@@ -1,7 +1,10 @@
-from pyspark.sql import functions
 from pyspark.sql import SparkSession
 from pyspark.sql import types
 from pyspark.sql import Window
+from pyspark.sql.avro.functions import to_avro
+from pyspark.sql.functions import col
+from pyspark.sql.functions import regexp_replace
+from pyspark.sql.functions import split
 
 DEFAULT_APPLICATION_NAME='consumer'
 DEFAULT_HDFS_PATH='hdfs://192.168.1.22:9000/'
@@ -32,28 +35,36 @@ if __name__ == '__main__':
         .option('subscribe', kafka_topic) \
         .load()
 
-    # Persisting the hashtags
-    df=df.selectExpr('CAST(value AS STRING)')
-    
-    # Persisting the hashtags
-    df.writeStream \
-        .format('csv') \
-        .option('path', hdfs_path + 'hashtags') \
-        .option('checkpointLocation', hdfs_path + 'checkpoint') \
-        .start() 
-    
-    # Printing the hashtags
-    df.withColumn(
+    # Casting string to array
+    df=df \
+    .selectExpr('CAST(value AS STRING)') \
+    .withColumn(
         'value', # column
-        functions.split(
-            functions.regexp_replace(
-                functions.col('value'), # column
+        split(
+            regexp_replace(
+                col('value'), # column
                 r'(^\[)|(\]$)|(\')', # regex
                 ''
             ), 
             ', '
         )
-    ).writeStream \
+    )
+    
+    # Enconding to Avro
+    df=df \
+    .select(
+        to_avro('value').alias('value')
+    )
+    
+    # Persisting the hashtags (Avro)
+    df.writeStream \
+        .format('avro') \
+        .option('path', hdfs_path + 'hashtags') \
+        .option('checkpointLocation', hdfs_path + 'checkpoint') \
+        .start() 
+    
+    # Printing the hashtags
+    df.writeStream \
         .format('console') \
         .start()
     
