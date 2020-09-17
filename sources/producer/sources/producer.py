@@ -124,7 +124,13 @@ if __name__ == '__main__':
         hashtags = [hashtag['text'] for hashtag in tweet['entities']['hashtags']]
         
         if len(hashtags) > 0:
-            future=producer.send(arguments.kafka_topic, hashtags)
+            future=producer.send(
+                arguments.kafka_topic, 
+                {
+                    'timestamp': tweet['timestamp_ms'] if 'timestamp_ms' in tweet else None, 
+                    'hashtags': hashtags
+                }
+            )
 
             # Printing the hashtags
             if arguments.logs:
