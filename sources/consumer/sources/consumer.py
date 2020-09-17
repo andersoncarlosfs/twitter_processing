@@ -4,8 +4,8 @@ from pyspark.sql import types
 from pyspark.sql import Window
 
 DEFAULT_APPLICATION_NAME='consumer'
-DEFAULT_HDFS_PATH='hdfs://localhost:9000/'
-DEFAULT_KAFKA_BROKERS='localhost:9092, kafka:29092'
+DEFAULT_HDFS_PATH='hdfs://192.168.1.22:9000/'
+DEFAULT_KAFKA_BROKERS='192.168.1.22:9092, kafka:29092'
 DEFAULT_KAFKA_TOPIC='tweets'  
 DEFAULT_SCHEMA='consumer'
     
@@ -35,7 +35,7 @@ if __name__ == '__main__':
     # Persisting the hashtags
     df=df.selectExpr('CAST(value AS STRING)')
     
-    
+    # Persisting the hashtags
     df.writeStream \
         .format('csv') \
         .option('path', hdfs_path + 'hashtags') \
@@ -54,9 +54,7 @@ if __name__ == '__main__':
             ', '
         )
     ).writeStream \
-        .format('csv') \
-        .option('path', hdfs_path + 'hashtags') \
-        .option('checkpointLocation', hdfs_path + 'checkpoint') \
+        .format('console') \
         .start()
     
     # Running
