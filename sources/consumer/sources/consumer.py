@@ -13,7 +13,7 @@ DEFAULT_START=True
 DEFAULT_HDFS_PATH='hdfs://192.168.1.22:9000/'
 DEFAULT_KAFKA_BROKERS='192.168.1.22:9092, kafka:29092'
 DEFAULT_KAFKA_TOPIC='tweets'
-DEFAULT_MONGODB_URI='mongodb://127.0.0.1:27017/hashtags.trends'
+DEFAULT_MONGODB_URI='mongodb://root:root@192.168.1.22:27017/hashtags.trends?authSource=admin'
 
 # https://stackoverflow.com/questions/62125482/how-to-write-spark-structure-stream-into-mongodb-collection
 def write(df, epoch): 
@@ -21,6 +21,8 @@ def write(df, epoch):
         .format('mongo') \
         .mode('append') \
         .save()
+    
+    pass
     
 if __name__ == '__main__':
     #
@@ -79,6 +81,8 @@ if __name__ == '__main__':
     arguments=parser.parse_args()
     
     # Getting a session
+    # https://docs.mongodb.com/manual/reference/connection-string/#urioption.authSource
+    # https://stackoverflow.com/questions/47000648/mongo-spark-connector-auth-error        
     session=SparkSession \
         .builder \
         .appName('consumer') \
@@ -112,7 +116,8 @@ if __name__ == '__main__':
                 types.StructField('hashtags', types.ArrayType(types.StringType()))
             ])
         ).alias('record')) \
-        .select('record.*')
+        .select('record.*') \
+        .withColumn('timestamp', col('timestamp').cast(types.LongType()))
         
         # Persisting the hashtags (Avro)
         df.select(
